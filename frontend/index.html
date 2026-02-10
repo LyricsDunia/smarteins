@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smarteins - AI-Powered Electronic Gadget Recommendations</title>
+    <meta name="description" content="Find the perfect electronic gadgets with AI-powered recommendations, smart filtering, and real-time price comparisons from trusted retailers.">
+    <meta name="keywords" content="electronic gadgets, AI recommendations, price comparison, smartphones, laptops, tech reviews">
+    <meta property="og:title" content="Smarteins - AI-Powered Electronic Gadget Recommendations">
+    <meta property="og:description" content="Find the perfect electronic gadgets with AI-powered recommendations, smart filtering, and real-time price comparisons from trusted retailers.">
+    <meta name="twitter:title" content="Smarteins - AI-Powered Electronic Gadget Recommendations">
+    <meta name="twitter:description" content="Find the perfect electronic gadgets with AI-powered recommendations, smart filtering, and real-time price comparisons from trusted retailers.">
+
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+
+    <!-- Predefined Tailwind CSS, use it as needed, or update base on your -->
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #3B82F6;
+            --secondary-color: #1E40AF;
+            --accent-color: #F59E0B;
+            --background-color: #F8FAFC;
+            --text-primary: #1F2937;
+            --text-secondary: #6B7280;
+            --border-color: #E5E7EB;
+            --success-color: #10B981;
+            --warning-color: #F59E0B;
+            --error-color: #EF4444;
+        }
+    }
+
+    @layer base {
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-primary);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.2;
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply bg-[var(--primary-color)] text-white px-6 py-3 rounded-lg font-medium hover:bg-[var(--secondary-color)] transition-colors duration-200;
+        }
+        
+        .btn-secondary {
+            @apply bg-white text-[var(--primary-color)] border border-[var(--primary-color)] px-6 py-3 rounded-lg font-medium hover:bg-[var(--primary-color)] hover:text-white transition-colors duration-200;
+        }
+        
+        .card {
+            @apply bg-white rounded-xl shadow-sm border border-[var(--border-color)] p-6;
+        }
+        
+        .input-field {
+            @apply w-full px-4 py-3 border border-[var(--border-color)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent;
+        }
+    }
+
+    @layer utilities {
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    }
+    </style>
+
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="src/main.jsx"></script>
+  </body>
+</html>

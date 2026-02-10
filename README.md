@@ -1,2 +1,0 @@
-# smarteins
-original
