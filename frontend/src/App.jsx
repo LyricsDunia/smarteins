@@ -19,7 +19,7 @@ function App() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/products")
+    fetch("https://smarteins-backend.onrender.com/api/products")
       .then(res => res.json())
       .then(data => setProducts(data.products || []))
       .catch(err => console.error(err));
