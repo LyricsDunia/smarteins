@@ -5,7 +5,8 @@ import cors from "cors";
 import path from "path";
 import dotenv from "dotenv";
 import { fileURLToPath } from "url";
-import { chatAI } from "./aiAgent.js";
+//import { chatAI } from "./aiAgent.js";
+import { syncProducts } from "./syncProducts.js";
 
 
 
@@ -54,8 +55,9 @@ const mongoUrl =
 MongoClient.connect(mongoUrl)
   .then(client => {
     console.log("Connected to MongoDB");
-    db = client.db("smarteinsDB");
+    db = client.db("productlist");  
 
+    syncProducts(db);
     initializeData();
 
     app.listen(PORT, () => {
@@ -206,9 +208,10 @@ app.get("/api/products/search", async (req, res) => {
   }
 });
 
-
+/*
 app.post("/api/chat", async (req, res) => {
   const { message, products } = req.body;
   const reply = await chatAI(message, products);
   res.json({ success: true, reply });
 });
+*/
