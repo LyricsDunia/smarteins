@@ -22,7 +22,7 @@ const PORT = process.env.PORT;
 /* -------------------- MIDDLEWARE -------------------- */
 app.use(
   cors({
-    origin: "https://www.smarteins.in",
+    origin: "https://www.smarteins.com",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: [
       "Content-Type",
